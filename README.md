@@ -40,5 +40,5 @@ localhost, what model to use etc., but it was not implemented due to the time
 
 ## P.S.
 
-This project is NOT to be used (at least for now), it is not finished (yet)
+This project is UNUSABLE and is to present the idea we made at the hackathon
 
