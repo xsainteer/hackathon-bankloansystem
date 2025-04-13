@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using BankLoanSystem.Entities;
 using Volo.Abp.ObjectExtending;
 
@@ -15,6 +16,7 @@ public static class IdentityUserExtensions
                 {
                     user.AddOrUpdateProperty<bool>("IsApproved");
                     user.AddOrUpdateProperty<Passport>("Passport");
+                    user.AddOrUpdateProperty<List<LoanRequest>>("LoanRequests");
                 });
             });
     }
