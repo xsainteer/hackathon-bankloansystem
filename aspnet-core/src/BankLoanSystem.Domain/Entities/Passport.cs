@@ -16,4 +16,5 @@ public class Passport : Entity<Guid>
     public DateTime IssueDate { get; init; }
     public DateTime ExpirationDate { get; init; }
     public string PlaceOfBirth { get; init; }
+    public AdditionalInfo AdditionalInfo { get; init; }
 }
