@@ -1,4 +1,7 @@
-﻿using Volo.Abp.Account;
+﻿using BankLoanSystem.Interfaces;
+using BankLoanSystem.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -27,5 +30,8 @@ public class BankLoanSystemApplicationModule : AbpModule
         {
             options.AddMaps<BankLoanSystemApplicationModule>();
         });
+        
+        context.Services.AddTransient<IScoringCalculationService, ScoringCalculationService>();
+        context.Services.AddTransient<ILoanService, LoanService>();
     }
 }
